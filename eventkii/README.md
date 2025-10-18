@@ -2,176 +2,97 @@
 
 **Secure Onchain Ticketing Platform**
 
-EventKii is a revolutionary blockchain-based ticketing platform that eliminates fraud, ensures authenticity, and provides seamless event management through smart contracts and NFT technology.
+EventKii is a blockchain-based ticketing platform that eliminates fraud and provides seamless event management through smart contracts and NFT technology.
 
 ![EventKii Logo](./public/eventkii-logo.svg)
 
 ## ✨ Features
 
-### 🎪 **Event Creation & Management**
-- Create and manage events with blockchain security
-- Set ticket prices, quantities, and event details
-- Real-time event analytics and insights
+- **🎪 Event Creation** - Create and manage events with blockchain security
+- **🎟️ NFT Tickets** - Mint fraud-proof tickets as unique NFTs
+- **🔐 Access Verification** - QR code-based ticket verification with blockchain validation
+- **💸 Ticket Transfers** - Secure peer-to-peer ticket transfers
+- **📊 Analytics** - Real-time sales tracking and event metrics
 
-### 🎟️ **NFT Ticket Minting**
-- Mint tickets as unique NFTs on the blockchain
-- Fraud-proof ticket authentication
-- Transferable and verifiable ownership
-
-### 🔐 **Access Verification**
-- QR code-based ticket verification
-- Instant blockchain validation
-- Secure entry management system
-
-### 💸 **Ticket Transfers**
-- Peer-to-peer ticket transfers
-- Secure blockchain transactions
-- Transfer history tracking
-
-### 📊 **Analytics Dashboard**
-- Real-time sales tracking
-- Event performance metrics
-- Revenue and attendance analytics
-
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
-
-- Node.js 18+ 
-- npm, yarn, pnpm, or bun
+- Node.js 18+
 - Web3 wallet (MetaMask recommended)
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/nobantugumbi/EventKii.git
-   cd EventKii/eventkii
-   ```
+```bash
+# Clone and navigate
+git clone https://github.com/nobantugumbi/EventKii.git
+cd EventKii/eventkii
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   # or
-   pnpm install
-   # or
-   bun install
-   ```
+# Install dependencies
+npm install
 
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env.local
-   ```
-   Configure your environment variables in `.env.local`
+# Start development server
+npm run dev
+```
 
-4. **Run the development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   # or
-   pnpm dev
-   # or
-   bun dev
-   ```
-
-5. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000) to see EventKii in action.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
 ## 🛠️ Tech Stack
 
 - **Frontend**: Next.js 15, React 19, TypeScript
 - **Blockchain**: OnchainKit, Wagmi, Viem
-- **Styling**: CSS Modules, Custom CSS
+- **Styling**: CSS Modules
 - **State Management**: React Query
-- **Development**: ESLint, Prettier
 
 ## 📁 Project Structure
 
 ```
 eventkii/
-├── app/                    # Next.js app directory
-│   ├── page.tsx           # Main application page
-│   ├── layout.tsx         # Root layout component
-│   ├── globals.css        # Global styles
-│   └── page.module.css    # Page-specific styles
-├── public/                # Static assets
-│   ├── eventkii-logo.svg # Main logo
-│   ├── eventkii-icon.svg # App icon
-│   └── eventkii-logo-light.svg # Light theme logo
-├── contracts/             # Smart contracts (future)
-└── package.json          # Dependencies and scripts
+├── app/
+│   ├── page.tsx           # Main application
+│   ├── layout.tsx         # Root layout
+│   └── *.css             # Styles
+├── public/
+│   └── eventkii-*.svg    # Logo assets
+└── contracts/            # Smart contracts
 ```
 
-## 🎯 Usage
+## 🎯 How to Use
 
-### Creating an Event
-1. Click "Create Events" on the main dashboard
-2. Fill in event details (name, date, venue, price)
-3. Set ticket quantity and sale parameters
-4. Deploy your event to the blockchain
+1. **Create Events** - Set up events with pricing and ticket quantities
+2. **Mint Tickets** - Generate NFT tickets for your events
+3. **Verify Access** - Scan QR codes for secure entry validation
+4. **Transfer Tickets** - Enable secure ticket transfers between users
+5. **View Analytics** - Track sales and event performance
 
-### Minting Tickets
-1. Select "Mint Tickets" from the dashboard
-2. Choose your event and ticket type
-3. Set pricing and availability
-4. Mint NFT tickets for your attendees
+## 🔧 Scripts
 
-### Verifying Access
-1. Use "Verify Access" for event entry
-2. Scan attendee QR codes
-3. Instant blockchain verification
-4. Grant or deny access based on ticket validity
-
-### Transferring Tickets
-1. Navigate to "Transfer Tickets"
-2. Enter recipient wallet address
-3. Select tickets to transfer
-4. Complete secure blockchain transaction
-
-## 🔧 Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
+```bash
+npm run dev    # Development server
+npm run build  # Production build
+npm run start  # Production server
+npm run lint   # Code linting
+```
 
 ## 🌐 Deployment
 
-EventKii can be deployed on various platforms:
-
-- **Vercel** (Recommended for Next.js)
-- **Netlify**
-- **AWS Amplify**
-- **Railway**
+Deploy on platforms like Vercel, Netlify, or AWS Amplify.
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - see [LICENSE](LICENSE) for details.
 
-## 🔗 Links
+## 🙏 Built With
 
-- **Website**: [EventKii Platform](https://eventkii.vercel.app)
-- **Documentation**: [EventKii Docs](https://docs.eventkii.com)
-- **Support**: [Contact Us](mailto:support@eventkii.com)
-
-## 🙏 Acknowledgments
-
-- Built with [OnchainKit](https://docs.base.org/onchainkit)
-- Powered by [Next.js](https://nextjs.org)
-- Blockchain infrastructure by [Base](https://base.org)
+- [OnchainKit](https://docs.base.org/onchainkit) - Blockchain toolkit
+- [Next.js](https://nextjs.org) - React framework
+- [Base](https://base.org) - Blockchain infrastructure
 
 ---
 

@@ -563,3 +563,182 @@
   font-size: 0.8rem;
   font-weight: 600;
 }
+
+/* My Tickets Styles */
+.myTicketsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ticketsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ticketCardFull {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.ticketCardFull:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(178, 255, 89, 0.3);
+  transform: translateY(-2px);
+}
+
+.ticketHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ticketHeader h4 {
+  color: #B2FF59;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.ticketStatus {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.ticketStatusUsed {
+  background: rgba(158, 158, 158, 0.2);
+  color: #9E9E9E;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.ticketDetails {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.ticketInfo {
+  flex: 1;
+}
+
+.ticketInfo p {
+  margin: 0.5rem 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.ticketInfo strong {
+  color: #FFC93C;
+}
+
+.ticketQR {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qrCode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.qrPattern {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #B2FF59 25%, transparent 25%), 
+              linear-gradient(-45deg, #B2FF59 25%, transparent 25%), 
+              linear-gradient(45deg, transparent 75%, #B2FF59 75%), 
+              linear-gradient(-45deg, transparent 75%, #B2FF59 75%);
+  background-size: 8px 8px;
+  background-position: 0 0, 0 4px, 4px -4px, -4px 0px;
+  border: 2px solid #B2FF59;
+  border-radius: 4px;
+}
+
+.qrCode p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.ticketActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.ticketActions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ticketsSummary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.ticketsSummary h4 {
+  color: #B2FF59;
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.summaryStats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summaryItem:last-child {
+  border-bottom: none;
+  font-weight: 600;
+}
+
+.summaryItem span:first-child {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.summaryItem span:last-child {
+  color: #FFC93C;
+  font-weight: 600;
+}
+
+/* Responsive Design for My Tickets */
+@media (max-width: 768px) {
+  .ticketDetails {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .ticketActions {
+    flex-direction: column;
+  }
+  
+  .ticketActions button {
+    width: 100%;
+  }
+}
