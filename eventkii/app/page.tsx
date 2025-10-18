@@ -13,46 +13,48 @@ export default function Home() {
       <div className={styles.content}>
         <Image
           priority
-          src="/sphere.svg"
-          alt="Sphere"
-          width={200}
+          src="/eventkii-logo.svg"
+          alt="EventKii Logo"
+          width={400}
           height={200}
         />
-        <h1 className={styles.title}>OnchainKit</h1>
 
-        <p>
-          Get started by editing <code>app/page.tsx</code>
+        <p className={styles.tagline}>
+          Your ticket. Your key. Onchain.
         </p>
 
-        <h2 className={styles.componentsTitle}>Explore Components</h2>
+        <p className={styles.description}>
+          The future of event ticketing is here. EventKii transforms traditional tickets into secure digital keys on the blockchain, ensuring authenticity, preventing fraud, and creating new possibilities for event experiences.
+        </p>
+
+        <h2 className={styles.componentsTitle}>Platform Features</h2>
 
         <ul className={styles.components}>
           {[
             {
-              name: "Transaction",
-              url: "https://docs.base.org/onchainkit/transaction/transaction",
+              name: "Create Events",
+              description: "Launch your event with blockchain-secured tickets",
             },
             {
-              name: "Swap",
-              url: "https://docs.base.org/onchainkit/swap/swap",
+              name: "Mint Tickets",
+              description: "Generate unique NFT tickets for attendees",
             },
             {
-              name: "Checkout",
-              url: "https://docs.base.org/onchainkit/checkout/checkout",
+              name: "Verify Access",
+              description: "Instant ticket validation at event entry",
             },
             {
-              name: "Wallet",
-              url: "https://docs.base.org/onchainkit/wallet/wallet",
+              name: "Transfer Tickets",
+              description: "Secure peer-to-peer ticket transfers",
             },
             {
-              name: "Identity",
-              url: "https://docs.base.org/onchainkit/identity/identity",
+              name: "Event Analytics",
+              description: "Real-time insights and attendance tracking",
             },
-          ].map((component) => (
-            <li key={component.name}>
-              <a target="_blank" rel="noreferrer" href={component.url}>
-                {component.name}
-              </a>
+          ].map((feature) => (
+            <li key={feature.name} className={styles.featureItem}>
+              <h3>{feature.name}</h3>
+              <p>{feature.description}</p>
             </li>
           ))}
         </ul>

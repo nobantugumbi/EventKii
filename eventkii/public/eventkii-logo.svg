@@ -1,0 +1,95 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background for contrast (can be removed for transparent) -->
+  <rect width="400" height="200" fill="#1A1A1A" rx="8"/>
+  
+  <!-- Blockchain network nodes in background -->
+  <g opacity="0.1" stroke="#B2FF59" stroke-width="1" fill="none">
+    <circle cx="50" cy="40" r="3" fill="#B2FF59"/>
+    <circle cx="120" cy="30" r="2" fill="#FFC93C"/>
+    <circle cx="350" cy="50" r="2" fill="#B2FF59"/>
+    <circle cx="320" cy="160" r="3" fill="#FFC93C"/>
+    <line x1="50" y1="40" x2="120" y2="30"/>
+    <line x1="120" y1="30" x2="350" y2="50"/>
+    <line x1="320" y1="160" x2="350" y2="50"/>
+  </g>
+  
+  <!-- Main Key-Ticket Logo -->
+  <g transform="translate(80, 50)">
+    <!-- Ticket portion (top part of key) -->
+    <g>
+      <!-- Main ticket body -->
+      <rect x="0" y="0" width="120" height="40" rx="4" fill="#B2FF59"/>
+      
+      <!-- Perforated edges -->
+      <g fill="#1A1A1A">
+        <!-- Left perforations -->
+        <circle cx="8" cy="8" r="1.5"/>
+        <circle cx="8" cy="16" r="1.5"/>
+        <circle cx="8" cy="24" r="1.5"/>
+        <circle cx="8" cy="32" r="1.5"/>
+        
+        <!-- Right perforations -->
+        <circle cx="112" cy="8" r="1.5"/>
+        <circle cx="112" cy="16" r="1.5"/>
+        <circle cx="112" cy="24" r="1.5"/>
+        <circle cx="112" cy="32" r="1.5"/>
+        
+        <!-- Center separation line -->
+        <rect x="58" y="12" width="4" height="16" rx="2"/>
+      </g>
+      
+      <!-- Ticket stub separation -->
+      <line x1="0" y1="20" x2="120" y2="20" stroke="#1A1A1A" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
+    </g>
+    
+    <!-- Key shaft -->
+    <rect x="45" y="40" width="30" height="35" fill="#FFC93C"/>
+    
+    <!-- Key teeth -->
+    <g fill="#FFC93C">
+      <rect x="75" y="55" width="15" height="8"/>
+      <rect x="75" y="67" width="12" height="8"/>
+      <rect x="75" y="45" width="18" height="6"/>
+    </g>
+    
+    <!-- Circuit pattern overlay -->
+    <g stroke="#1A1A1A" stroke-width="1" fill="none" opacity="0.2">
+      <path d="M20 10 L30 10 L35 15 L45 15"/>
+      <path d="M20 30 L25 30 L30 25 L40 25"/>
+      <circle cx="35" cy="15" r="2"/>
+      <circle cx="30" cy="25" r="2"/>
+    </g>
+  </g>
+  
+  <!-- EventKii Typography -->
+  <g transform="translate(220, 85)">
+    <!-- Event text -->
+    <text x="0" y="0" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" 
+          font-size="32" font-weight="600" fill="#FFFFFF">Event</text>
+    
+    <!-- Kii text (highlighted) -->
+    <text x="85" y="0" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" 
+          font-size="32" font-weight="700" fill="#B2FF59">Kii</text>
+    
+    <!-- Tagline -->
+    <text x="0" y="25" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" 
+          font-size="12" font-weight="400" fill="#FFC93C" opacity="0.8">Your ticket. Your key. Onchain.</text>
+  </g>
+  
+  <!-- Subtle glow effect around logo -->
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Apply glow to key-ticket -->
+  <g transform="translate(80, 50)" filter="url(#glow)" opacity="0.3">
+    <rect x="0" y="0" width="120" height="40" rx="4" fill="#B2FF59"/>
+    <rect x="45" y="40" width="30" height="35" fill="#FFC93C"/>
+  </g>
+</svg>
