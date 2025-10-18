@@ -230,104 +230,17 @@ export default function Home() {
           <div className={styles.formContainer}>
             <h3>My Tickets</h3>
             <div className={styles.myTicketsContainer}>
-              <div className={styles.ticketsGrid}>
-                <div className={styles.ticketCardFull}>
-                  <div className={styles.ticketHeader}>
-                    <h4>Tech Conference 2024</h4>
-                    <div className={styles.ticketStatus}>Valid</div>
-                  </div>
-                  <div className={styles.ticketDetails}>
-                    <div className={styles.ticketInfo}>
-                      <p><strong>Date:</strong> March 15, 2024</p>
-                      <p><strong>Time:</strong> 9:00 AM - 6:00 PM</p>
-                      <p><strong>Venue:</strong> Convention Center</p>
-                      <p><strong>Seat:</strong> A-15</p>
-                      <p><strong>Price:</strong> 0.05 ETH</p>
-                    </div>
-                    <div className={styles.ticketQR}>
-                      <div className={styles.qrCode}>
-                        <div className={styles.qrPattern}></div>
-                        <p>QR Code</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.ticketActions}>
-                    <button className={styles.primaryButton}>Download</button>
-                    <button className={styles.secondaryButton}>Transfer</button>
-                  </div>
-                </div>
-
-                <div className={styles.ticketCardFull}>
-                  <div className={styles.ticketHeader}>
-                    <h4>Music Festival</h4>
-                    <div className={styles.ticketStatus}>Valid</div>
-                  </div>
-                  <div className={styles.ticketDetails}>
-                    <div className={styles.ticketInfo}>
-                      <p><strong>Date:</strong> April 20, 2024</p>
-                      <p><strong>Time:</strong> 2:00 PM - 11:00 PM</p>
-                      <p><strong>Venue:</strong> Central Park</p>
-                      <p><strong>Type:</strong> General Admission</p>
-                      <p><strong>Price:</strong> 0.08 ETH</p>
-                    </div>
-                    <div className={styles.ticketQR}>
-                      <div className={styles.qrCode}>
-                        <div className={styles.qrPattern}></div>
-                        <p>QR Code</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.ticketActions}>
-                    <button className={styles.primaryButton}>Download</button>
-                    <button className={styles.secondaryButton}>Transfer</button>
-                  </div>
-                </div>
-
-                <div className={styles.ticketCardFull}>
-                  <div className={styles.ticketHeader}>
-                    <h4>Art Exhibition</h4>
-                    <div className={styles.ticketStatusUsed}>Used</div>
-                  </div>
-                  <div className={styles.ticketDetails}>
-                    <div className={styles.ticketInfo}>
-                      <p><strong>Date:</strong> February 10, 2024</p>
-                      <p><strong>Time:</strong> 10:00 AM - 8:00 PM</p>
-                      <p><strong>Venue:</strong> Modern Art Gallery</p>
-                      <p><strong>Type:</strong> VIP Access</p>
-                      <p><strong>Price:</strong> 0.12 ETH</p>
-                    </div>
-                    <div className={styles.ticketQR}>
-                      <div className={styles.qrCode}>
-                        <div className={styles.qrPattern}></div>
-                        <p>QR Code</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.ticketActions}>
-                    <button className={styles.secondaryButton} disabled>Event Ended</button>
-                  </div>
-                </div>
-              </div>
-              
-              <div className={styles.ticketsSummary}>
-                <h4>Ticket Summary</h4>
-                <div className={styles.summaryStats}>
-                  <div className={styles.summaryItem}>
-                    <span>Total Tickets:</span>
-                    <span>3</span>
-                  </div>
-                  <div className={styles.summaryItem}>
-                    <span>Active Tickets:</span>
-                    <span>2</span>
-                  </div>
-                  <div className={styles.summaryItem}>
-                    <span>Used Tickets:</span>
-                    <span>1</span>
-                  </div>
-                  <div className={styles.summaryItem}>
-                    <span>Total Value:</span>
-                    <span>0.25 ETH</span>
-                  </div>
+              <div className={styles.emptyState}>
+                <div className={styles.emptyStateIcon}>🎫</div>
+                <h4>No Tickets Yet</h4>
+                <p>You haven't purchased any tickets yet. Start by creating or browsing events to mint your first NFT ticket!</p>
+                <div className={styles.emptyStateActions}>
+                  <button className={styles.primaryButton} onClick={() => setActiveModal("create-event")}>
+                    Create Event
+                  </button>
+                  <button className={styles.secondaryButton} onClick={() => setActiveModal("mint-tickets")}>
+                    Browse Events
+                  </button>
                 </div>
               </div>
             </div>
